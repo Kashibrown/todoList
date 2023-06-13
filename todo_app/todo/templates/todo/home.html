@@ -1,0 +1,23 @@
+{% extends 'todo/base.html' %}
+{% block content %}
+
+<div class="home">
+    <marquee><p style="font-weight:bold; font-size:larger;"><i>About My To Do List App!</i></p></marquee>
+    
+    <p style="color:#f4f4f4; word-spacing:0.4em;">
+        Are you frequently overwhelmed by the volume of work you need to complete? Do you often find yourself missing deadlines or forgetting important tasks, causing others to have to remind you?
+        These signs indicate a lack of a well-maintained "To-Do List." A To-Do List is a prioritized inventory of all the tasks you must accomplish. It encompasses everything you need to do, with the most crucial tasks at the top and the less important ones at the bottom.
+        By maintaining such a list, you ensure that all your tasks are documented in one place, minimizing the risk of forgetting anything significant. Additionally, by prioritizing tasks, you plan the sequence in which they should be tackled. This allows you to identify which tasks require immediate attention and which ones can be postponed until later.
+        To-do lists are crucial for conquering work overload. When not used effectively, you may appear scattered and unreliable to those around you.
+    </p>
+    <hr>
+    <br>
+    <div class="box"> 
+        <p><a href="{% url 'login' %}">Login</a></p>
+        <p>don't have an account?<a href="{% url 'register' %}">  Register</a> </p>
+    </div> 
+</div>
+
+
+
+{% endblock content %}

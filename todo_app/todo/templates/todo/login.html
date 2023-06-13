@@ -1,0 +1,22 @@
+{% extends 'todo/base.html '%}
+{% load crispy_forms_tags%}
+{% block content %}
+
+<div class="header-bar">
+    <h1>Login</h1>
+    <a style="color: rgb(247, 247, 247); text-decoration:none;" href="{% url 'home' %}">Home</a>
+</div>
+
+<div class="card-body">
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input class="button" type="submit" value="Login">
+    </form>
+    <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+    <small><a href="{% url 'password_reset' %}">Forgotten your password? </a></small>
+</div>
+
+
+
+{% endblock content %}
